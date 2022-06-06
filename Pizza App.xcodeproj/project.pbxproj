@@ -17,8 +17,8 @@
 		B4E7B70628335B74003FDA57 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B70528335B74003FDA57 /* FavouriteView.swift */; };
 		B4E7B70828335F2D003FDA57 /* AddPizzaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B70728335F2D003FDA57 /* AddPizzaView.swift */; };
 		B4E7B70A28335F6E003FDA57 /* PizzaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B70928335F6E003FDA57 /* PizzaDetailView.swift */; };
-		B4E7B71528336CE3003FDA57 /* Pizza+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B71328336CE3003FDA57 /* Pizza+CoreDataClass.swift */; };
-		B4E7B71628336CE3003FDA57 /* Pizza+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B71428336CE3003FDA57 /* Pizza+CoreDataProperties.swift */; };
+		B4E7B7192833852D003FDA57 /* Pizza+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B7172833852D003FDA57 /* Pizza+CoreDataClass.swift */; };
+		B4E7B71A2833852D003FDA57 /* Pizza+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7B7182833852D003FDA57 /* Pizza+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		B4E7B70528335B74003FDA57 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		B4E7B70728335F2D003FDA57 /* AddPizzaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPizzaView.swift; sourceTree = "<group>"; };
 		B4E7B70928335F6E003FDA57 /* PizzaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailView.swift; sourceTree = "<group>"; };
-		B4E7B71328336CE3003FDA57 /* Pizza+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pizza+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B4E7B71428336CE3003FDA57 /* Pizza+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pizza+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B4E7B7172833852D003FDA57 /* Pizza+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pizza+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4E7B7182833852D003FDA57 /* Pizza+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pizza+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,6 @@
 		B4E7B6E228334FF9003FDA57 = {
 			isa = PBXGroup;
 			children = (
-				B4E7B71328336CE3003FDA57 /* Pizza+CoreDataClass.swift */,
-				B4E7B71428336CE3003FDA57 /* Pizza+CoreDataProperties.swift */,
 				B4E7B6ED28334FF9003FDA57 /* Pizza App */,
 				B4E7B6EC28334FF9003FDA57 /* Products */,
 			);
@@ -91,6 +89,8 @@
 		B4E7B70128335726003FDA57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4E7B7172833852D003FDA57 /* Pizza+CoreDataClass.swift */,
+				B4E7B7182833852D003FDA57 /* Pizza+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,8 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E7B71628336CE3003FDA57 /* Pizza+CoreDataProperties.swift in Sources */,
-				B4E7B71528336CE3003FDA57 /* Pizza+CoreDataClass.swift in Sources */,
+				B4E7B71A2833852D003FDA57 /* Pizza+CoreDataProperties.swift in Sources */,
+				B4E7B7192833852D003FDA57 /* Pizza+CoreDataClass.swift in Sources */,
 				B4E7B6FB28334FFC003FDA57 /* Pizza_App.xcdatamodeld in Sources */,
 				B4E7B70428335865003FDA57 /* PizzaListView.swift in Sources */,
 				B4E7B6F828334FFC003FDA57 /* Persistence.swift in Sources */,

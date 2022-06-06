@@ -10,19 +10,36 @@ import SwiftUI
 struct FavouriteView: View {
     
     @FetchRequest(entity: Pizza.entity(), sortDescriptors: [], predicate: NSPredicate(format: "isFavourite = %d", true)) var favourites: FetchedResults<Pizza>
+    @Environment(\.managedObjectContext) var context
     
     
     var body: some View {
-        List(favourites) { favourite in
-            HStack {
-                Image(favourite.imageName ?? "")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                Text(favourite.name ?? "")
-            }
+        NavigationView {
+            List(favourites) { favourite in
+                NavigationLink {
+                    PizzaDetailView(pizza: favourite)
+                } label: {
+                    HStack {
+                        Image(favourite.imageName ?? "")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                        Text(favourite.name ?? "")
+                    }
+                }
+                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                    Button {
+                        context.delete(favourite)
+                        try? context.save()
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
 
+            }
+            .listStyle(PlainListStyle())
         }
-        .listStyle(PlainListStyle()) // PlainListStyle
+        .navigationTitle("Favourites")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
 }

@@ -10,24 +10,24 @@ import SwiftUI
 
 struct PizzaListView: View {
     
-    @State private var pizzaType = 0
+    @State private var pizzaType = "All"
     @State private var showAddPizzaView = false
+    @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Pizza.entity(), sortDescriptors: []) var pizzas: FetchedResults<Pizza>
     
     var body: some View {
         NavigationView {
             VStack{
                 Picker("Pizzas", selection: $pizzaType) {
-                    Text("All🍕").tag(0)
-                    Text("Meat🥩").tag(1)
-                    Text("Veggie🥦").tag(2)
+                    Text("All🍕").tag("All")
+                    Text("Meat🥩").tag("Meat")
+                    Text("Veggie🥦").tag("Veggie")
                 }
                 .pickerStyle(.segmented)
                 .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
-                
                 List(pizzas, id: \.name) { pizza in
                     NavigationLink {
-                        
+                        PizzaDetailView(pizza: pizza)
                     } label: {
                         HStack {
                             Image(pizza.imageName ?? "")
@@ -38,13 +38,11 @@ struct PizzaListView: View {
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button {
-//                            context.delete(pizza)
-//                            try? context.save()
+                            context.delete(pizza)
+                            try? context.save()
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
-                        
-                        
                     }
                 }
                 .onChange(of: pizzaType, perform: { newValue in
